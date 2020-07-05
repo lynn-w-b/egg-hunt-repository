@@ -31,44 +31,44 @@ splash.html
 --head
 ---link to css styles
 --body
----<h1> Game Title
----<img> Large pic/logo
----<h2> Sub-title - Instructions
----<p> Game Instructions
----<button> Start Game - links to game.html
----<scripts> Link to js files
+---h1 Game Title
+---img Large pic/logo
+---h2 Sub-title - Instructions
+---p Game Instructions
+---button Start Game - links to game.html
+---scripts Link to js files
 
 game.html
 --head
 ---link to css styles
 --body
 ---split into divs
----<h1>Game Title
----<h2>Eggs collected (scoreboard)
----<p>Egg counter (scoreboard)
----<div> Gameboard - card set-up
----<div> Countdown timer
----<scripts> Link to js files
+---h1 Game Title
+---h2 Eggs collected (scoreboard)
+---p Egg counter (scoreboard)
+---div Gameboard - card set-up
+---div Countdown timer
+---scripts Link to js files
   
 winner.html
 --head
 ---link to css styles
 --body
----<h1> Winning Message
----<img> Winning pic/logo
----<h2> Second winning message
----<button> Start Game - links to game.html
----<scripts> Link to js files
+---h1 Winning Message
+---img Winning pic/logo
+---h2 Second winning message
+---button Start Game - links to game.html
+---scripts Link to js files
   
 loser.html
 --head
 ---link to css styles
 --body
----<h1> Losing Message
----<img> Losing pic/logo
----<h2> Second losing message
----<button> Start Game - links to game.html
----<scripts> Link to js files
+---h1 Losing Message
+---img Losing pic/logo
+---h2 Second losing message
+---button Start Game - links to game.html
+---scripts Link to js files
 
 style.css
 -body - background, fonts
