@@ -162,12 +162,12 @@ Restart game button links to gameScreen, shuffles cards, sets up new gameboard a
 https://monpetit.ludigaume.be/jeu-TousAuPoulailler
 
 ### Trello
-[https://trello.com/b/8g86BCZ3/froggy-loggy](https://trello.com)
+[https://trello.com/b/8g86BCZ3/egg-hunt](https://trello.com)
 
 
 ### Git
 URls for the project repo and deploy
-[https://www.figma.com/file/iIDxpaA3KY63R0TdBk46Gr/Egg-Hunt?node-id=1%3A117](http://github.com)
+[https://github.com/lynn-w-b/egg-hunt-repository.git](http://github.com)
 [Link Deploy](http://github.com)
 
 
