@@ -2,13 +2,13 @@
 Egg Hunt
 
 ## Description
-A game of chance for one player. Who can collect the most eggs? 60 cards are displayed with images of either a whole egg, a broken egg, a basket or a hen on one side and a generic back. The player flips a card, selecting it by clicking on it. If it is an egg, one point is added to his egg counter. If it is a broken egg, one point is taken away from his egg counter. The player has 60 seconds to get 5 eggs in his egg counter.
+A game of chance for one player. Can you collect 5 eggs before the time runs out? 60 cards are displayed with images of either a whole egg, a broken egg, a basket or a hen on one side and a generic back. The player flips a card, selecting it by clicking on it. If it is an egg, one point is added to his egg counter. If it is a broken egg, one point is taken away from his egg counter. The player has 60 seconds to get 5 eggs in his egg counter.
 
 
 ## MVP (DOM - CANVAS)
 Wireframes https://www.figma.com/file/iIDxpaA3KY63R0TdBk46Gr/Egg-Hunt?node-id=1%3A117
 - Splash page with image, title and instructions
-Play Game Button sets up game page and starts counter running from 60 seconds.
+Play Game Button sets up game page and starts countdown running from 60 seconds.
 - Game Page 
 Try to reach 5 eggs. 60 card grid. Cards have two sides. One side is blank, the other has an image of either an egg, a broken egg, a chicken or a basket on it.
 On each turn a player turns over a card. If the card is:
@@ -16,14 +16,14 @@ On each turn a player turns over a card. If the card is:
 -- a broken egg, the card is left image side up. The player loses one egg from the counter;
 -- a chicken, the card is left image side up. Nothing happens to the counter;
 -- a basket, the card is left image side up. Nothing happens to the counter.
-Once the player reaches 5 eggs or the clock reaches 0, the game is over. The player either wins if he has collected 5 eggs or loses if not.
+Once the player reaches 5 eggs or the countdown reaches 0, the game is over. The player either wins if he has collected 5 eggs or loses if not.
 - Win/Lose pages
-Display winning/losing messages plus image. Link button to restart game page and start clock counting down from 60 seconds.
+Display winning/losing messages plus image. Link button to restart game page and start countdown from 60 seconds.
 
 ## Backlog
 - Remove cards from board once have been turned over.
 - Basket cards - egg cards can only be collected if a basket card is overturned. Egg cards stay overturned and are not counted until this happens. 
-- Chicken cards - collect all overturned egg cards if clicked. The removed from board.
+- Chicken cards - collect all overturned egg cards if clicked. They are removed from board.
 - Introduce two players to game - game is over once all cards have been overturned. Winner is player who has collected most eggs.
 
 ## Data structure
@@ -124,6 +124,8 @@ Restart game button links to gameScreen, shuffles cards, sets up new gameboard a
 
 ## Task
 -Set up new Github repo and add create all required files
+-Select images and background for use in game
+
 -Create basic html structure
 -Create basic css styling for html pages (not including timer and gameboard)
 
