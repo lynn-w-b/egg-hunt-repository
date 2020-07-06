@@ -20,76 +20,57 @@ splash.html/game.html/winner.html/loser.html
 style.css
 
 index.js
--array of card objects 
--printTime method 
--eventlisteners 
---on load sets up new gameboard 
---on card click uses toggle method to change card face and calls checkAction method
--gameOver method 
+- array of card objects 
+- printTime method 
+- eventlisteners 
+-- on load sets up new gameboard 
+-- on card click uses toggle method to change card face and calls checkAction method
+- gameOver method 
 
 eggGame.js
--eggGame class
--shufflecards method 
--checkAction method 
--isFinished method
+- eggGame class
+- shufflecards method 
+- checkAction method 
+- isFinished method
 
 chronometer.js
--Chronometer class
--startTime method 
--stopTime method 
+- Chronometer class
+- startTime method 
+- stopTime method 
 
 ## States y States Transitions
 
 - splashScreen
-Displays game title/logo or pic and instructions 
-Start game button - new eggGame,shuffleCards(), new Chronometer, startTime()
+eventListener - startGame
 
 - gameScreen
-Displays gameboard, egg counter and countdown clock.
-Countdown timer - printTime (), stopTime()
-Egg Counter - isFinished (), gameOver()
+new eggGame
 
 - gameoverScreen
-Displays losing image and pic.
-Restart game button - new eggGame,shuffleCards(), new Chronometer, startTime()
+eventListener - startGame
 
 - winScreen
-Displays winning image and pic.
-Restart game button - new eggGame,shuffleCards(), new Chronometer, startTime()
+eventListener - startGame
 
 ## Task
--Github repo
--Images and background
--splash.html -structure
--game.html -structure
--winner.html -structure
--loser.html -structure
--splash.html -css styling 
--game.html -css styling
--winner.html -css styling
--loser.html -css styling
--index.js -structure
--eggGame.js -structure
--chronometer.js -structure
--game.html -gameboard -css styling
--index.js -card array
--eggGame.js -eggGame class
--eggGame.js -shufflecards method 
--index.js -set event listeners -start buttons
--index.js -set event listener -gameboard set-up
--index.js -set event listener -card click 
--eggGame.js -checkAction method 
--game.html -timer -css styling
--chronometer.js -Chronometer class
--chronometer.js -startTime method 
--chronometer.js -stopTime method
--chronometer.js -printTime method 
--index.js -gameOver method 
--eggGame.js -isFinished method
--checkfunctionality
--improve css styling
--reformat code
--start on backlog
+- index.js -structure
+- eggGame.js -structure
+- chronometer.js -structure
+- game.html -gameboard -css styling
+- index.js -card array
+- eggGame.js -eggGame class
+- eggGame.js -shufflecards method 
+- index.js -set event listeners -start buttons
+- index.js -set event listener -gameboard set-up
+- index.js -set event listener -card click 
+- eggGame.js -checkAction method 
+- game.html -timer -css styling
+- chronometer.js -Chronometer class
+- chronometer.js -startTime method 
+- chronometer.js -stopTime method
+- chronometer.js -printTime method 
+- index.js -gameOver method 
+- eggGame.js -isFinished method
 
 ## Links
 https://monpetit.ludigaume.be/jeu-TousAuPoulailler
