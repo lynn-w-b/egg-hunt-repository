@@ -41,33 +41,19 @@ chronometer.js
 ## States y States Transitions
 
 - splashScreen
-Displays game title/logo or pic and instructions 
 Start game button - new eggGame,shuffleCards(), new Chronometer, startTime()
 
 - gameScreen
-Displays gameboard, egg counter and countdown clock.
 Countdown timer - printTime (), stopTime()
 Egg Counter - isFinished (), gameOver()
 
 - gameoverScreen
-Displays losing image and pic.
 Restart game button - new eggGame,shuffleCards(), new Chronometer, startTime()
 
 - winScreen
-Displays winning image and pic.
 Restart game button - new eggGame,shuffleCards(), new Chronometer, startTime()
 
 ## Task
-- Github repo
-- Images and background
-- splash.html -structure
-- game.html -structure
-- winner.html -structure
-- loser.html -structure
-- splash.html -css styling 
-- game.html -css styling
-- winner.html -css styling
-- loser.html -css styling
 - index.js -structure
 - eggGame.js -structure
 - chronometer.js -structure
@@ -86,10 +72,6 @@ Restart game button - new eggGame,shuffleCards(), new Chronometer, startTime()
 - chronometer.js -printTime method 
 - index.js -gameOver method 
 - eggGame.js -isFinished method
-- checkfunctionality
-- improve css styling
-- reformat code
-- start on backlog
 
 ## Links
 https://monpetit.ludigaume.be/jeu-TousAuPoulailler
