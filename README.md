@@ -41,17 +41,16 @@ chronometer.js
 ## States y States Transitions
 
 - splashScreen
-Start game button - new eggGame,shuffleCards(), new Chronometer, startTime()
+eventListener - startGame
 
 - gameScreen
--- Countdown timer - printTime (), stopTime()
--- Egg Counter - isFinished (), gameOver()
+new eggGame
 
 - gameoverScreen
-Restart game button - new eggGame,shuffleCards(), new Chronometer, startTime()
+eventListener - startGame
 
 - winScreen
-Restart game button - new eggGame,shuffleCards(), new Chronometer, startTime()
+eventListener - startGame
 
 ## Task
 - index.js -structure
