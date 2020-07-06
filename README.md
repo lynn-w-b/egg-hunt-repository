@@ -44,8 +44,8 @@ chronometer.js
 Start game button - new eggGame,shuffleCards(), new Chronometer, startTime()
 
 - gameScreen
-Countdown timer - printTime (), stopTime()
-Egg Counter - isFinished (), gameOver()
+-- Countdown timer - printTime (), stopTime()
+-- Egg Counter - isFinished (), gameOver()
 
 - gameoverScreen
 Restart game button - new eggGame,shuffleCards(), new Chronometer, startTime()
