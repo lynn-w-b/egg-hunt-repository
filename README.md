@@ -6,19 +6,7 @@ A game of chance for one player. Can you collect 5 eggs before the time runs out
 
 
 ## MVP (DOM - CANVAS)
-Wireframes https://www.figma.com/file/iIDxpaA3KY63R0TdBk46Gr/Egg-Hunt?node-id=1%3A117
-- Splash page with image, title and instructions
-Play Game Button sets up game page and starts countdown running from 60 seconds.
-- Game Page 
-Try to reach 5 eggs. 60 card grid. Cards have two sides. One side is blank, the other has an image of either an egg, a broken egg, a chicken or a basket on it.
-On each turn a player turns over a card. If the card is:
--- an egg, the card is left image side up.One egg is added to the counter;
--- a broken egg, the card is left image side up. The player loses one egg from the counter;
--- a chicken, the card is left image side up. Nothing happens to the counter;
--- a basket, the card is left image side up. Nothing happens to the counter.
-Once the player reaches 5 eggs or the countdown reaches 0, the game is over. The player either wins if he has collected 5 eggs or loses if not.
-- Win/Lose pages
-Display winning/losing messages plus image. Link button to restart game page and start countdown from 60 seconds.
+On each turn a player turns over a card. Once the player reaches 5 eggs or the countdown reaches 0, the game is over. The player either wins if he has collected 5 eggs or loses if not.
 
 ## Backlog
 - Remove cards from board once have been turned over.
@@ -27,139 +15,86 @@ Display winning/losing messages plus image. Link button to restart game page and
 - Introduce two players to game - game is over once all cards have been overturned. Winner is player who has collected most eggs.
 
 ## Data structure
-splash.html
---head
----link to css styles
---body
----h1 Game Title
----img Large pic/logo
----h2 Sub-title - Instructions
----p Game Instructions
----button Start Game - links to game.html
----scripts Link to js files
-
-game.html
---head
----link to css styles
---body
----split into divs
----h1 Game Title
----h2 Eggs collected (scoreboard)
----p Egg counter (scoreboard)
----div Gameboard - card set-up
----div Countdown timer
----scripts Link to js files
-  
-winner.html
---head
----link to css styles
---body
----h1 Winning Message
----img Winning pic/logo
----h2 Second winning message
----button Start Game - links to game.html
----scripts Link to js files
-  
-loser.html
---head
----link to css styles
---body
----h1 Losing Message
----img Losing pic/logo
----h2 Second losing message
----button Start Game - links to game.html
----scripts Link to js files
+splash.html/game.html/winner.html/loser.html
 
 style.css
--body - background, fonts
--Gameboard - background, layout, display
--cards - front and back displays
--scoreboard
--h1
--h2
--p
--Countdown timer
 
 index.js
--creates array of objects to hold card values
--creates new game when start button clicked
--creates new countdown timer when start button clicked
--printTime method used to display countdown
--sets eventlisteners 
---on load sets up new gameboard of cards
---on card being clicked uses toggle method to change card face and calls method for adding or taking away egg from egg counter
--gameOver method ends game when player collects 5 eggs and displays winner.html or displays loser.html if countdown timer runs out 
+-array of card objects 
+-printTime method 
+-eventlisteners 
+--on load sets up new gameboard 
+--on card click uses toggle method to change card face and calls checkAction method
+-gameOver method 
 
 eggGame.js
--sets up eggGame class
--shufflecards method - shuffles cards when game is restarted
--checkAction method - checks if an egg needs to be added or subtracted from egg counter and does so
--isFinished - checks if player has reached 5 eggs or if countdown clock has reached zero
-
-chronometer.js
--sets up Chronometer class
--startTime method sets sets intervalID to 1 sec
--stopTime method stops game after 60 seconds
-
-## States y States Transitions
-Definition of the different states and their transition (transition functions)
-
-- splashScreen
-Displays game title/logo or pic and instructions - static
-Start game button links to gameScreen, shuffles cards, sets up new gameboard and starts countdown timer.
-- gameScreen
-Displays gameboard, egg counter and countdown clock.
-Each card on gameboard has two states clicked or unclicked - on click the card displays an image and remains clicked. Unclicked cards display a solid colour. Toogle method used to toggle between two states.
-Egg counter displays a number and is added to or deducted from depending on results of checkAction method.
-Countdown timer displays time each second using printTime method.
-isFinished method determines whether game is over if player reaches 5 eggs.
-stopTime method stops game after 60 seconds.
-gameOver method links to either winScreen or gameoverScreen depending on result.
-- gameoverScreen
-Displays losing image and pic.
-Restart game button links to gameScreen, shuffles cards, sets up new gameboard and starts countdown timer.
-- winScreen
-Displays winning image and pic.
-Restart game button links to gameScreen, shuffles cards, sets up new gameboard and starts countdown timer.
-
-## Task
--Set up new Github repo and add create all required files
--Select images and background for use in game
-
--Create basic html structure
--Create basic css styling for html pages (not including timer and gameboard)
-
--Create basic structure (no content)for index.js
--Create basic structure (no content)for eggGame.js
--Create basic structure (no content)for chronometer.js
-
--Create basic css styling for gameboard
--card array
 -eggGame class
 -shufflecards method 
-
--set event listeners for start buttons
--set event listener for new gameboard set-up
-
--set event listener for card click 
 -checkAction method 
-
--Create basic css styling for timer
--Chronometer class
--startTime method 
--stopTime method
--printTime method 
-
--gameOver method 
 -isFinished method
 
+chronometer.js
+-Chronometer class
+-startTime method 
+-stopTime method 
+
+## States y States Transitions
+
+- splashScreen
+Displays game title/logo or pic and instructions 
+Start game button - new eggGame,shuffleCards(), new Chronometer, startTime()
+
+- gameScreen
+Displays gameboard, egg counter and countdown clock.
+Countdown timer - printTime (), stopTime()
+Egg Counter - isFinished (), gameOver()
+
+- gameoverScreen
+Displays losing image and pic.
+Restart game button - new eggGame,shuffleCards(), new Chronometer, startTime()
+
+- winScreen
+Displays winning image and pic.
+Restart game button - new eggGame,shuffleCards(), new Chronometer, startTime()
+
+## Task
+-Github repo
+-Images and background
+-splash.html -structure
+-game.html -structure
+-winner.html -structure
+-loser.html -structure
+-splash.html -css styling 
+-game.html -css styling
+-winner.html -css styling
+-loser.html -css styling
+-index.js -structure
+-eggGame.js -structure
+-chronometer.js -structure
+-game.html -gameboard -css styling
+-index.js -card array
+-eggGame.js -eggGame class
+-eggGame.js -shufflecards method 
+-index.js -set event listeners -start buttons
+-index.js -set event listener -gameboard set-up
+-index.js -set event listener -card click 
+-eggGame.js -checkAction method 
+-game.html -timer -css styling
+-chronometer.js -Chronometer class
+-chronometer.js -startTime method 
+-chronometer.js -stopTime method
+-chronometer.js -printTime method 
+-index.js -gameOver method 
+-eggGame.js -isFinished method
 -checkfunctionality
--improve css styling and look
+-improve css styling
 -reformat code
--start on backlog if time
+-start on backlog
 
 ## Links
 https://monpetit.ludigaume.be/jeu-TousAuPoulailler
+https://www.figma.com/file/iIDxpaA3KY63R0TdBk46Gr/Egg-Hunt?node-id=0%3A1
+
 
 ### Trello
 [https://trello.com/b/8g86BCZ3/egg-hunt](https://trello.com)
