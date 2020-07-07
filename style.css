@@ -10,7 +10,7 @@ body {
   }
   .title h1{
       font-size: 100px; 
-      color: red;
+      color: rgba(215, 44, 44);
       padding: 30px;
   }
   #logo {
@@ -20,9 +20,12 @@ body {
     border: 5px solid black;
     border-radius: 25px;
   }
+  .instructions {
+    text-align: center;
+  }
   .instructions h2{
       font-size: 75px;
-      color: red;
+      color:  rgba(215, 44, 44);
       padding: 10px;
   }
   .instructions p{
@@ -31,12 +34,12 @@ body {
       color: yellow;
       padding: 20px
   }
-  #splash-button {
+  .center-button {
     display: flex;
     justify-content: center;
   }
   .start-button {
-    background-color:red;
+    background-color: rgba(215, 44, 44);
     border: yellow solid 3px;
     border-radius: 15px;
     color: white;
@@ -47,24 +50,66 @@ body {
     font-style: normal;
     font-weight: 400;
   }
-  
-  #game-board {
-    background: url('images/Egg\ Hunt\ Background.svg') no-repeat;
-    background-size: cover;;
-    width: 800px;
-    height: 540px;
-    padding: 70px;
+  .extra-message {
+    text-align: center;
+  }
+  .extra-message h1{
+    font-size: 100px; 
+    color:  rgba(215, 44, 44);
+    padding: 30px;
+  }
+  .extra-message h1 span{
+    color: purple;
+  }
+  #extra-pic {
+    width: 900px;
+    background-color: white;
     margin: 0px auto;
     border: 5px solid black;
+    border-radius: 25px;
+  }
+  .play-again-message h2 {
+    font-size: 75px;
+    color: yellow;
+    padding: 10px;
+  }
+  .play-again-message span{
+    color: purple;
+  }
+  #top-screen {
+    text-align: center;
+  }
+  #game-background {
+    background: url('images/Egg\ Hunt\ Background.svg') no-repeat;
+    background-size: cover;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #game-board {
+    background-color:white;
+    width: 80%;
+    height: 75%;
+    padding: 5px;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 75px;
+    border: 5px solid black;
     border-radius: 84px;
-    box-shadow: inset 0px 0px 20px -6px red;
+    box-shadow: inset 0px 0px 20px -6px  rgba(215, 44, 44);
+    text-align: center;
   }
   
   .card {
     display: inline-block;
-    perspective: 300px;
+    perspective: 100px;
     transform-style: preserve-3d;
     position: relative;
+    border: 1px solid black;
+    border-radius: 84px;
   }
   
   .card.turned {
@@ -80,8 +125,8 @@ body {
   
   .card .back,
   .card .front {
-    width: 37px;
-    height: 47px;
+    width: 20px;
+    height: 40px;
     margin: 10px;
     padding: 20px;
     transition: transform 0.6s;
@@ -98,42 +143,53 @@ body {
     transform: rotateY(-180deg) translateZ(1px);
     backface-visibility: hidden;
   }
-  
-  #score {
-    background-color: rgba(215, 44, 44, 0.8);
-    border-radius: 8px;
-    font-size: 30px;
-    font-family: Arial;
-    width: 200px;
-    padding: 20px;
-    padding-top: 0;
-    margin-left: 75%;
+  #game-name {
+    display: flex;
+    justify-content: center;
   }
-  
-  .container {
-    position: relative;
+  #game-name h1{
+    font-size: 100px; 
+    color:  rgba(215, 44, 44);
+    padding: 10px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 84px;
+    width: 350px;
   }
-  
-  h1 {
-    color: rgba(215, 40, 40, 0.9);
-    font-weight: bolder;
-    font-size: 67px;
+  #display-together {
+    display:flex;
+    justify-content: space-evenly;
+  }
+  #basket {
+    background-color: rgba(215, 44, 44);
+    border: 5px solid black;
+    border-radius: 84px;
+    font-size: 40px;
     text-align: center;
-    text-shadow: 0px 0px 20px rgba(150, 150, 150, 1);
+    width: 200px;
+    height: 200px;
+    padding: 5px;
   }
-  
+  #countdown-timer {
+    background-color: rgba(215, 44, 44);
+    border: 5px solid black;
+    border-radius: 84px;
+    font-size: 40px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+  }
+  h1 {
+    font-weight: bolder;
+    text-align: center;
+  }
   h2 {
-    color: #456783;
+    color: black;
     font-weight: bolder;
     font-size: 35px;
     text-align: center;
-    text-shadow: 1px #ff0000;
-    text-shadow: 1px #ff0000;
   }
   
-  p {
-    font-weight: bolder;
-    font-size: 20px;
-    text-align: center;
-  }
+  
   

@@ -10,23 +10,25 @@
     <title>Egg Hunt</title>
     <link rel="icon" type="image/svg" href="images/Egg Hunt Logo.svg" sizes="16x16">
     <link rel="stylesheet" href="https://use.typekit.net/yfa3sbn.css">
-    <link rel = "stylesheet" href="">
-    //need to link css stylesheet here!!
+    <link rel = "stylesheet" href="style.css">
   </head>
-  <body>
+  <body id="game-background">
     <div id="game-name">
       <h1>Egg Hunt</h1>
     </div>
-    <div id="basket">
-      <h2>Eggs Collected</h2>
-      <p><span id="eggs-collected">0</span></p>
-    </div>
     <div id="game-board"></div>
-    <div id="countdown-timer">
+    <div id="display-together">
+      <div id="basket">
+        <h2>Eggs Collected</h2>
+        <span id="eggs-collected">0</span>
+      </div>
+      <div id="countdown-timer">
+        <h2>Seconds left</h2>
         <span id="seconds" class="number">0</span>
+      </div>
     </div>
-    <script src="index.js"></script>
     <script src="eggGame.js"></script>
     <script src="chronometer.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
