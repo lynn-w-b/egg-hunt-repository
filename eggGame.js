@@ -1,12 +1,12 @@
 class EggGame {
-    //sets up eggGame class
     constructor(cards){
       this.cards = cards;
-      this.pickedCards = [];
+      this.eggsCollected = 0;
+      this.chicken = new Audio('./sounds/chickens-2_M1q_0nEd.mp3');
       this.shuffleCards();
     }
+
     shuffleCards() {
-        //shuffles cards when game is restarted
       let arrayLength = this.cards.length;
       while(arrayLength > 0){
         arrayLength--;
@@ -15,14 +15,30 @@ class EggGame {
         this.cards[arrayLength] = this.cards[randomIndex];
         this.cards[randomIndex] = currentCard;
       }}
-    checkAction(){
-        return true;
+
+    checkAction(cardname){
+      let eggCounter = document.getElementById('eggs-collected');
+        if (cardname === 'egg'){
+          this.chicken.play();
+          this.eggsCollected++;
+          eggCounter.innerHTML = this.eggsCollected;
+        } else if(cardname === 'broken_egg'){
+          this.eggsCollected--;
+          eggCounter.innerHTML = this.eggsCollected;
+        }
+        this.isFinished();
     }
-    //checks if an egg needs to be added or subtracted from egg coungter and does so
-        //need printBasket method in index.js and getEggs variable
+  
     isFinished() {
-        return true;
-        //checks if player has reached 5 eggs or if countdown clock has reached zero
-        //need printBasket method in index.js and getEggs variable
+      if (this.eggsCollected === 5 && countdown.currentTime > 0){
+        window.localStorage.setItem("scoreboard", JSON.stringify([{score:countdown.currentTime}]));
+        setTimeout(window.close, 1000);
+        setTimeout(window.open('./winner.html'), 1000);
+        let winTime = document.getElementById('winning-time');
+        winTime.innerHTML = countdown.currentTime;
+        countdown.stopTime();
+      } 
     }
     }
+
+

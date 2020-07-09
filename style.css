@@ -80,7 +80,7 @@ body {
     text-align: center;
   }
   #game-background {
-    background: url('images/Egg\ Hunt\ Background.svg') no-repeat;
+    background: url('images/EggHuntBackground.svg') no-repeat;
     background-size: cover;
     background-color: yellow;
     display: flex;
@@ -133,7 +133,7 @@ body {
   }
   
   .card .back {
-    background: url('images/Card\ Back\ .svg');
+    background: url('images/CardBack.svg');
   }
   
   .card .front {
