@@ -5,15 +5,10 @@ body {
     font-style: normal;
     font-weight: 400;
   }
-  .title{
-    text-align: center;
-  }
-  .title h1{
-      font-size: 80px; 
-      color: rgba(215, 44, 44);
-      padding: 5px;
-  }
-  #logo {
+.title {
+  text-align: center;
+}
+#logo {
     width: 900px;
     background-color: white;
     margin: 0px auto;
@@ -21,25 +16,25 @@ body {
     border: 5px solid black;
     border-radius: 25px;
   }
-  .instructions {
+.instructions {
     text-align: center;
   }
-  .instructions h2{
+.instructions h2{
       font-size: 75px;
       color:  rgba(215, 44, 44);
       padding: 10px;
   }
-  .instructions p{
+.instructions p{
       font-size: 40px;
       font-weight: 500;
       color: yellow;
       padding: 20px
   }
-  .center-button {
+.center-button {
     display: flex;
     justify-content: center;
   }
-  .start-button {
+.start-button {
     background-color: rgba(215, 44, 44);
     border: yellow solid 3px;
     border-radius: 15px;
@@ -50,10 +45,10 @@ body {
     font-family: bad-dog, sans-serif;
     font-style: normal;
     font-weight: 400;
-    margin-right: 10px;
+    margin: 10px;
   }
-  .instructions-button {
-    background-color: rgba(215, 44, 44);
+.instructions-button {
+    background-color: rgb(0, 0, 0);
     border: yellow solid 3px;
     border-radius: 15px;
     color: white;
@@ -63,38 +58,52 @@ body {
     font-family: bad-dog, sans-serif;
     font-style: normal;
     font-weight: 400;
-    margin-left: 10px;
+    margin: 10px;
   }
-  .extra-message {
+.turn-sound-on {
+    background-color: rgb(0, 0, 0);
+    border: yellow solid 3px;
+    border-radius: 15px;
+    color: white;
+    padding: 25px 32px;
+    text-align: center;
+    font-size: 40px;
+    font-family: bad-dog, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 10px;
+  }
+.extra-message {
     text-align: center;
   }
-  .extra-message h1{
+.extra-message h1{
     font-size: 60px; 
     color:  rgba(215, 44, 44);
-    padding: 5px;
   }
-  .extra-message h1 span{
+.extra-message h1 span{
     color: purple;
   }
-  #extra-pic {
+#extra-pic {
     width: 60%;
     background-color: white;
     margin: 0px auto;
     border: 5px solid black;
     border-radius: 25px;
   }
-  .play-again-message h2 {
+.play-again-message h2 {
     font-size: 40px;
     color: yellow;
-    padding: 5px;
   }
-  .play-again-message span{
+.play-again-message span{
     color: purple;
   }
-  #top-screen {
+#winning-time {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+#top-screen {
     text-align: center;
   }
-  #game-background {
+#game-background {
     background: url('images/EggHuntBackground.svg') no-repeat;
     background-size: cover;
     background-color: yellow;
@@ -103,12 +112,12 @@ body {
     justify-content: center;
     align-content: center;
   }
-
-  #game-board {
+#game-board {
     background-color:white;
     width: 87%;
     height: 45%;
     padding: 5px;
+    margin-top: 0;
     margin-left: 75px;
     margin-bottom: 75px;
     border: 5px solid black;
@@ -116,8 +125,7 @@ body {
     box-shadow: inset 0px 0px 20px -6px  rgba(215, 44, 44);
     text-align: center;
   }
-  
-  .card {
+.card {
     display: inline-block;
     perspective: 100px;
     transform-style: preserve-3d;
@@ -125,20 +133,19 @@ body {
     border: 1px solid black;
     border-radius: 84px;
   }
-  
-  .card.turned {
+.card.turned {
     pointer-events: none;
   }
   
-  .card.turned .front {
+.card.turned .front {
     transform: rotateY(0deg);
   }
-  .card.turned .back {
+.card.turned .back {
     transform: rotateY(180deg);
   }
   
-  .card .back,
-  .card .front {
+.card .back,
+.card .front {
     width: 20px;
     height: 40px;
     margin: 10px;
@@ -146,22 +153,22 @@ body {
     transition: transform 0.6s;
   }
   
-  .card .back {
+.card .back {
     background: url('images/CardBack.svg');
   }
   
-  .card .front {
+.card .front {
     position: absolute;
     left: 0;
     top: 0;
     transform: rotateY(-180deg) translateZ(1px);
     backface-visibility: hidden;
   }
-  #game-name {
+#game-name {
     display: flex;
     justify-content: center;
   }
-  #game-name h1{
+#game-name h1{
     font-size: 100px; 
     color:  rgba(215, 44, 44);
     padding: 10px;
@@ -169,13 +176,15 @@ body {
     border: 5px solid black;
     border-radius: 84px;
     width: 350px;
+    margin-bottom: 5px;
   }
-  #display-together {
+#display-together {
     display:flex;
     justify-content: space-evenly;
     padding-top: 25px;
+    margin-bottom: 5px;
   }
-  #basket {
+#basket {
     background-color: rgba(215, 44, 44);
     border: 5px solid black;
     border-radius: 84px;
@@ -185,13 +194,13 @@ body {
     height: 200px;
     padding: 5px;
   }
-  #eggs-collected {
+#eggs-collected {
     font-family: Arial, Helvetica, sans-serif;
   }
-  #seconds {
+#seconds {
     font-family: Arial, Helvetica, sans-serif;
   }
-  #countdown-timer {
+#countdown-timer {
     background-color: rgba(215, 44, 44);
     border: 5px solid black;
     border-radius: 84px;
@@ -201,11 +210,11 @@ body {
     height: 200px;
     padding: 5px;
   }
-  h1 {
+h1 {
     font-weight: bolder;
     text-align: center;
   }
-  h2 {
+h2 {
     color: black;
     font-weight: bolder;
     font-size: 35px;

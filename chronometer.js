@@ -5,7 +5,6 @@ class Chronometer {
       this.cock = new Audio('./sounds/old-cock-crowing_GJwQhSNO.mp3');
       this.startTime();
     }
-  
     startTime() {
       this.intervalId = setInterval(() => {
         this.currentTime--;
@@ -16,6 +15,8 @@ class Chronometer {
     timesUp(){
       if (this.currentTime === 0){
         this.cock.play();
+        this.cock.play();
+        this.cock.play();
         clearInterval(this.intervalId);
         setTimeout(window.close, 1000);
         setTimeout(window.open('./loser.html'), 1000)
@@ -23,5 +24,6 @@ class Chronometer {
     }
     stopTime(){
       clearInterval(this.intervalId);
-    }
+    }    
   }
+
