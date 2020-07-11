@@ -31,14 +31,15 @@ class EggGame {
   
     isFinished() {
       if (this.eggsCollected === 5 && countdown.currentTime > 0){
-        window.localStorage.setItem("scoreboard", JSON.stringify([{score:countdown.currentTime}]));
         setTimeout(window.close, 1000);
         setTimeout(window.open('./winner.html'), 1000);
         let winTime = document.getElementById('winning-time');
+        console.log(winTime);
         winTime.innerHTML = countdown.currentTime;
+        window.localStorage.setItem("scoreboard", JSON.stringify([{score:countdown.currentTime}]));
         countdown.stopTime();
       } 
     }
     }
 
-
+    
