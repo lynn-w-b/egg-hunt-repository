@@ -84,7 +84,7 @@ https://www.figma.com/file/iIDxpaA3KY63R0TdBk46Gr/Egg-Hunt?node-id=0%3A1
 ### Git
 URls for the project repo and deploy
 [https://github.com/lynn-w-b/egg-hunt-repository.git](http://github.com)
-[Link Deploy](http://github.com)
+[https://lynn-w-b.github.io/egg-hunt-repository/](http://github.com)
 
 
 ### Slides
