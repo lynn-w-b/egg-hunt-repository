@@ -15,8 +15,6 @@ class Chronometer {
     timesUp(){
       if (this.currentTime === 0){
         this.cock.play();
-        this.cock.play();
-        this.cock.play();
         clearInterval(this.intervalId);
         setTimeout(window.close, 1000);
         setTimeout(window.open('./loser.html'), 1000)
