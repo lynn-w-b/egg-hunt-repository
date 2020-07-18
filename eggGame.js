@@ -4,7 +4,7 @@ class EggGame {
       this.eggsCollected = 0;
       this.chicken = new Audio('./sounds/chickens-2_M1q_0nEd.mp3');
       this.smash = new Audio('./sounds/strong-hit-with-small-smash_MJxvHHNd.mp3');
-      this.squawk = new Audio('/sounds/chicken-cluck_zkAjTiNd.mp3');
+      this.squawk = new Audio('./sounds/chicken-cluck_zkAjTiNd.mp3');
       this.shuffleCards();
     }
 
