@@ -2,22 +2,23 @@
 Egg Hunt
 
 ## Description
-A game of chance for one player. Can you collect 5 eggs before the time runs out? 60 cards are displayed with images of either a whole egg, a broken egg, a basket or a hen on one side and a generic back. The player flips a card, selecting it by clicking on it. If it is an egg, one point is added to his egg counter. If it is a broken egg, one point is taken away from his egg counter. The player has 60 seconds to get 5 eggs in his egg counter.
+A game of chance for one player. Can you collect 15 eggs before the time runs out? 60 cards are displayed with images of either a whole egg, a broken egg, a basket or a hen on one side and a generic back. The player flips a card, selecting it by clicking on it. If it is an egg, the egg card remains on the board. If the player finds a basket card, one point for each egg card displayed on the board is added to his egg counter. If the player finds a chicken card, all egg cards displayed on the board are removed. If it is a broken egg, one point is taken away from his egg counter. The player has 60 seconds to get 15 eggs in his egg counter.
 
 
 ## MVP (DOM - CANVAS)
-On each turn a player turns over a card. Once the player reaches 5 eggs or the countdown reaches 0, the game is over. The player either wins if he has collected 5 eggs or loses if not.
+On each turn a player turns over a card. Once the player reaches 15 eggs or the countdown reaches 0, the game is over. The player either wins if he has collected 15 eggs or loses if not.
 
 ## Backlog
-- Remove cards from board once have been turned over.
-- Basket cards - egg cards can only be collected if a basket card is overturned. Egg cards stay overturned and are not counted until this happens. 
-- Chicken cards - collect all overturned egg cards if clicked. They are removed from board.
 - Introduce two players to game - game is over once all cards have been overturned. Winner is player who has collected most eggs.
 
 ## Data structure
 splash.html/game.html/winner.html/loser.html
 
 style.css
+
+start.js/splash.js/loser.js/winner.js
+- plays music
+-start/restart buttons
 
 index.js
 - array of card objects 
@@ -45,6 +46,7 @@ eventListener - startGame
 
 - gameScreen
 new eggGame
+new Chronometer
 
 - gameoverScreen
 eventListener - startGame
