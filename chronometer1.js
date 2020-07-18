@@ -1,4 +1,4 @@
-class Chronometer {
+class Chronometer1 {
     constructor() {
       this.currentTime = 60;
       this.intervalId = 0; 
@@ -17,7 +17,7 @@ class Chronometer {
         this.cock.play();
         clearInterval(this.intervalId);
         setTimeout(window.close, 1000);
-        setTimeout(window.open('./loser.html'), 1000)
+        setTimeout(window.open('./loser1.html'), 1000)
       }
     }
     stopTime(){

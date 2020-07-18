@@ -61,23 +61,23 @@ const cards = [
     { name: 'black_hen', img: 'images/BlackHenCard.svg' }
   ];
 
-  const eggHuntGame = new EggGame(cards);
-  const countdown = new Chronometer(); 
+  const eggHuntGame1 = new EggGame1(cards);
+  const countdown1 = new Chronometer1(); 
   const backgroundMusic = new Audio ('./sounds/audioblocks-heartland-and-home_Hy0YuPvGI.mp3');
   backgroundMusic.volume = 0.2;
   backgroundMusic.play();
   printTime();
 
   function printTime() {
-    let secDisplay = document.getElementById('seconds');
+    let secDisplay = document.getElementById('seconds1');
     let intervalId = setInterval(() => {
-    secDisplay.innerHTML = countdown.currentTime;
+    secDisplay.innerHTML = countdown1.currentTime;
     }, 1000);
   }
  
 document.addEventListener('DOMContentLoaded', function(event) {
   let html = '';
-  eggHuntGame.cards.forEach(pic => {
+  eggHuntGame1.cards.forEach(pic => {
     html += `<div class="card" data-card-name="${pic.name}">`;
     html += `<div class="back" name="${pic.img}"></div>`;
     html += `<div class="front" style="background: url(${pic.img}) no-repeat"></div>`;
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     card.onclick = function() {
       toggle(card.children[0],["back","front"]);
       toggle(card.children[1],["back","front"]);
-      eggHuntGame.checkAction(card.getAttribute("data-card-name"), card);
+      eggHuntGame1.checkAction(card.getAttribute("data-card-name"), card);
       card.classList.add("blocked");
     }
   })

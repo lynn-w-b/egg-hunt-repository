@@ -1,4 +1,4 @@
-class EggGame {
+class EggGame1 {
   constructor(cards){
     this.cards = cards;
     this.eggsCollected = 0;
@@ -20,7 +20,7 @@ class EggGame {
     }}
   checkAction(cardname, card){
     console.log(this.clicks);
-    let eggCounter = document.getElementById('eggs-collected');
+    let eggCounter1 = document.getElementById('eggs-collected1');
     switch (cardname) {
       case 'egg':
         this.chicken.play();
@@ -29,7 +29,7 @@ class EggGame {
       case 'broken_egg':
         this.smash.play();
         this.eggsCollected--;
-        eggCounter.innerHTML = this.eggsCollected;
+        eggCounter1.innerHTML = this.eggsCollected;
         setTimeout(() => {
           card.remove();
         },2000 );
@@ -74,18 +74,18 @@ class EggGame {
         }, 2000);
         this.howManyEggs = this.pickedCards.length;
         this.eggsCollected += this.howManyEggs;
-        eggCounter.innerHTML = this.eggsCollected;
+        eggCounter1.innerHTML = this.eggsCollected;
         break;
       }
       this.isFinished();
   }
 
   isFinished() {
-    if (this.eggsCollected >= 15 && countdown.currentTime > 0){
-      window.localStorage.winTime = countdown.currentTime;
-      countdown.stopTime();
+    if (this.eggsCollected >= 15 && countdown1.currentTime > 0){
+      window.localStorage.winTime = countdown1.currentTime;
+      countdown1.stopTime();
       setTimeout(window.close, 1000);
-      setTimeout(window.open('./winner.html'), 1000);
+      setTimeout(window.open('./winner1.html'), 1000);
     } 
   }
   }
