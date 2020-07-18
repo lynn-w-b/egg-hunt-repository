@@ -1,6 +1,6 @@
 class Chronometer {
     constructor() {
-      this.currentTime = 30;
+      this.currentTime = 60;
       this.intervalId = 0; 
       this.cock = new Audio('./sounds/old-cock-crowing_GJwQhSNO.mp3');
       this.startTime();
